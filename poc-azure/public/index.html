@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Transcritor de Áudio com Azure Speech-to-Text</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Transcritor de Áudio</h1>
+            <p>Utilizando Azure Speech-to-Text</p>
+        </header>
+
+        <textarea id="transcript" placeholder="A transcrição aparecerá aqui..." readonly></textarea>
+
+        <div id="status">Pronto para gravar.</div>
+
+        <div class="controls">
+            <button id="startRecButton">Iniciar Gravação</button>
+            <button id="pauseRecButton" disabled>Pausar Gravação</button>
+            <button id="resumeRecButton" disabled>Continuar Gravação</button>
+            <button id="stopRecButton" disabled>Parar Gravação</button>
+        </div>
+        <div id="audioPlayerContainer"></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
